@@ -1,45 +1,220 @@
-.root {
-    -fx-font-family: "Segoe UI", Arial, sans-serif;
-    -fx-background-color: #f8f9fa;
+/* 
+   ==========================================================================
+   Thermodynamic Converter - Group 3 Professional Glassmorphic Style Guide
+   ==========================================================================
+*/
+
+/* Deep cosmic background with dark slate-blue gradient */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #070b19, #0f172a, #1e1b4b);
+    -fx-font-family: "Segoe UI", -apple-system, Roboto, sans-serif;
 }
 
-.label {
-    -fx-font-size: 14px;
-    -fx-text-fill: #2c3e50;
+/* Glassmorphism container card: semi-transparent, frosted glow border, heavy drop-shadow */
+.glass-card {
+    -fx-background-color: rgba(15, 23, 42, 0.65);
+    -fx-background-radius: 24px;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 24px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 25, 0.0, 0, 10);
 }
 
-.text-field, .combo-box {
-    -fx-background-radius: 15;
-    -fx-border-radius: 15;
-    -fx-padding: 10;
-    -fx-font-size: 14px;
-    -fx-border-color: #bdc3c7;
-}
-
-.button {
-    -fx-background-radius: 15;
-    -fx-border-radius: 15;
-    -fx-padding: 12 25;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-}
-
-.convert-button {
-    -fx-background-color: #3498db;
-    -fx-text-fill: white;
-}
-
-.swap-button {
-    -fx-background-color: #2ecc71;
-    -fx-text-fill: white;
-}
-
-.button:hover {
-    -fx-opacity: 0.9;
-}
-
+/* Headers */
 .title-label {
-    -fx-font-size: 22px;
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #ffffff;
+    -fx-letter-spacing: 1px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 210, 255, 0.3), 8, 0.0, 0, 0);
+}
+
+.subtitle-label {
+    -fx-font-size: 11px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
+    -fx-text-fill: #38bdf8; /* Vibrant cyan-sky blue */
+    -fx-padding: 0 0 10 0;
+}
+
+.form-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #94a3b8; /* Slate gray */
+}
+
+/* Premium Inputs */
+.modern-text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-radius: 12px;
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 14;
+    -fx-prompt-text-fill: #64748b;
+    -fx-pref-width: 220px;
+}
+
+.modern-text-field:focused {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+    -fx-border-color: #38bdf8;
+    -fx-effect: dropshadow(two-pass-box, rgba(56, 189, 248, 0.2), 6, 0.0, 0, 0);
+}
+
+/* ComboBox dropdowns styling to match inputs */
+.modern-combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-radius: 12px;
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 10;
+    -fx-pref-width: 220px;
+}
+
+.modern-combo-box:focused {
+    -fx-border-color: #38bdf8;
+}
+
+.modern-combo-box .label {
+    -fx-text-fill: #ffffff;
+}
+
+.modern-combo-box .cell {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8;
+}
+
+.modern-combo-box .cell:hover, .modern-combo-box .cell:filled:selected {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #38bdf8;
+}
+
+/* Interactive custom Buttons */
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #0284c7, #0369a1);
+    -fx-background-radius: 12px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 22;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(two-pass-box, rgba(2, 132, 199, 0.3), 8, 0.0, 0, 3);
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to right, #0ea5e9, #0284c7);
+    -fx-effect: dropshadow(two-pass-box, rgba(14, 165, 233, 0.5), 12, 0.0, 0, 0);
+}
+
+.secondary-button {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+    -fx-background-radius: 12px;
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: #ffffff;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Dynamic Formula Explainer Display Card */
+.formula-card {
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+    -fx-background-radius: 14px;
+    -fx-border-color: rgba(255, 255, 255, 0.05);
+    -fx-border-radius: 14px;
+    -fx-border-width: 1px;
+}
+
+.formula-header {
+    -fx-font-size: 10px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #64748b;
+    -fx-letter-spacing: 0.5px;
+}
+
+.formula-label {
+    -fx-font-size: 13px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+    -fx-text-fill: #10b981; /* Glowing emerald green */
+    -fx-line-spacing: 4px;
+}
+
+/* Error banner */
+.error-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f43f5e; /* Glowing rose/red error text */
+}
+
+/* Large Result Showcase Panel */
+.result-card {
+    -fx-background-color: linear-gradient(to bottom right, rgba(56, 189, 248, 0.08), rgba(2, 132, 199, 0.03));
+    -fx-background-radius: 16px;
+    -fx-border-color: rgba(56, 189, 248, 0.2);
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+}
+
+.big-result-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #00e5ff; /* Super radiant neon cyan */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.35), 10, 0.0, 0, 0);
+}
+
+/* History Log tracker panel */
+.history-header {
+    -fx-font-size: 11px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #94a3b8;
+    -fx-letter-spacing: 0.5px;
+}
+
+.history-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+}
+
+.history-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.history-item-label {
+    -fx-font-size: 12px;
+    -fx-font-family: monospace;
+    -fx-text-fill: #cbd5e1;
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-radius: 6px;
+    -fx-padding: 6 10;
+    -fx-pref-width: 228px;
+    -fx-border-color: rgba(255, 255, 255, 0.05);
+    -fx-border-radius: 6px;
+}
+
+/* Footer elements */
+.footer-label {
+    -fx-font-size: 9px;
+    -fx-text-fill: #475569;
+    -fx-wrap-text: true;
+    -fx-padding: 10 0 0 0;
 }
